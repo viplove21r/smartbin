@@ -66,7 +66,7 @@ Waste Classifier | Home
             <p class="result-label">Predicted Class</p>
 
             <h1 class="prediction-name">
-                {{ prediction|title }}
+                {{ final_class|title }}
             </h1>
 
             <p class="result-label">Confidence</p>
@@ -78,18 +78,19 @@ Waste Classifier | Home
 
             <div class="comparison-results">
 
-                <!-- EfficientNet result -->
+                <!-- 1. EfficientNet Result -->
                 <div class="result-card">
                     <h3>🤖 EfficientNet Prediction</h3>
 
-                    <h2>{{ prediction }}</h2>
+                    <h2>{{ prediction|title }}</h2>
 
                     <p>
                         Model confidence: {{ confidence }}%
                     </p>
                 </div>
 
-                <!-- Similarity result -->
+
+                <!-- 2. Similarity-Based Result -->
                 <div class="result-card">
                     <h3>🔍 Similarity-Based Prediction</h3>
 
@@ -106,7 +107,7 @@ Waste Classifier | Home
 
                     <p>
                         Closest image similarity:
-                        {{ similarity_result.best_similarity }}%
+                        {{ similarity_result.best_similarity|floatformat:2 }}
                     </p>
 
                     <p>
@@ -122,6 +123,33 @@ Waste Classifier | Home
                     </p>
 
                     {% endif %}
+                </div>
+
+
+                <!-- 3. Fuzzy Hybrid Result -->
+                <div class="result-card">
+                    <h3>🧠 Fuzzy Hybrid Prediction</h3>
+
+                    <h2>{{ final_class|title }}</h2>
+
+                    <p>
+                        Final hybrid score: {{ final_confidence }}%
+                    </p>
+
+                    <hr>
+
+                    <p>
+                        <strong>Weights determined by fuzzy logic:</strong>
+                    </p>
+
+                    <p>
+                        EfficientNet contribution: {{ model_weight }}%
+                    </p>
+
+                    <p>
+                        Similarity contribution: {{ similarity_weight }}%
+                    </p>
+
                 </div>
 
             </div>
@@ -189,7 +217,7 @@ Waste Classifier | Home
                     <form method="POST" action="{% url 'add_compost_item' %}">
                         {% csrf_token %}
 
-                        <input type="hidden" name="waste_type" value="{{ predicted_class|lower }}">
+                        <input type="hidden" name="waste_type" value="{{ final_class|lower }}">
 
                         <button type="submit" class="compost-btn">
                             <span>＋</span> Add to Compost Bin
