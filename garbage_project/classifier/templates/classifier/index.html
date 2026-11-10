@@ -1,0 +1,297 @@
+{% extends "classifier/base.html" %}
+
+{% block title %}
+Waste Classifier | Home
+{% endblock %}
+
+
+{% block content %}
+
+<div class="home-container">
+
+    <!-- Heading -->
+
+    <div class="page-heading">
+
+        <h1>Waste Classification</h1>
+
+        <p>
+            Upload an image to identify the type of waste using
+            our machine learning model.
+        </p>
+
+    </div>
+
+
+    <!-- Upload Section -->
+
+    <div class="upload-card">
+
+        <h2>Upload Waste Image</h2>
+
+        <p class="muted-text">
+            Select an image of cardboard, glass, metal, paper,
+            plastic or trash.
+        </p>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <div class="file-input-container">
+
+                <input type="file" name="image" accept="image/*" required id="image-input">
+
+            </div>
+
+            <button type="submit" class="primary-btn">
+                Classify Waste
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- Prediction Result -->
+
+    {% if prediction %}
+
+    <div class="result-card">
+
+        <h2>Classification Result</h2>
+
+        <div class="prediction-result">
+
+            <p class="result-label">Predicted Class</p>
+
+            <h1 class="prediction-name">
+                {{ prediction|title }}
+            </h1>
+
+            <p class="result-label">Confidence</p>
+
+            <h2 class="confidence-value">
+                {{ confidence }}%
+            </h2>
+
+
+            <div class="comparison-results">
+
+                <!-- EfficientNet result -->
+                <div class="result-card">
+                    <h3>🤖 EfficientNet Prediction</h3>
+
+                    <h2>{{ prediction }}</h2>
+
+                    <p>
+                        Model confidence: {{ confidence }}%
+                    </p>
+                </div>
+
+                <!-- Similarity result -->
+                <div class="result-card">
+                    <h3>🔍 Similarity-Based Prediction</h3>
+
+                    {% if similarity_result %}
+
+                    <h2>
+                        {{ similarity_result.similarity_class|title }}
+                    </h2>
+
+                    <p>
+                        Weighted vote share:
+                        {{ similarity_result.similarity_score }}%
+                    </p>
+
+                    <p>
+                        Closest image similarity:
+                        {{ similarity_result.best_similarity }}%
+                    </p>
+
+                    <p>
+                        Compared against
+                        {{ similarity_result.match_count }}
+                        previous feedback examples.
+                    </p>
+
+                    {% else %}
+
+                    <p>
+                        Not enough reference examples available yet.
+                    </p>
+
+                    {% endif %}
+                </div>
+
+            </div>
+
+
+            {% if scan and not scan.feedback %}
+            <div class="prediction-feedback">
+                <div class="feedback-heading">
+                    <span class="feedback-icon">💬</span>
+                    <div>
+                        <h3>Was this prediction correct?</h3>
+                        <p>Your feedback helps improve waste classification.</p>
+                    </div>
+                </div>
+
+                <div class="feedback-actions">
+                    <form method="POST" action="{% url 'submit_feedback' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="scan_id" value="{{ scan.id }}">
+                        <input type="hidden" name="feedback" value="correct">
+
+                        <button type="submit" class="feedback-btn correct-btn">
+                            <span>✓</span> Yes, correct
+                        </button>
+                    </form>
+
+                    <form method="POST" action="{% url 'submit_feedback' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="scan_id" value="{{ scan.id }}">
+                        <input type="hidden" name="feedback" value="incorrect">
+
+                        <button type="submit" class="feedback-btn incorrect-btn">
+                            <span>✕</span> No, incorrect
+                        </button>
+                    </form>
+                </div>
+            </div>
+            {% endif %}
+
+
+            {% if waste_details %}
+
+            <div class="waste-details">
+
+                <h2>Waste Management Guide</h2>
+
+                <p class="waste-description">
+                    {{ waste_details.description }}
+                </p>
+
+                {% if can_compost %}
+                <div class="compost-action">
+
+                    <div class="compost-action-info">
+                        <span class="compost-action-icon">🌱</span>
+                        <div>
+                            <h3>Compost this item</h3>
+                            <p>
+                                This material can be considered for composting.
+                                Add it to your compost collection.
+                            </p>
+                        </div>
+                    </div>
+
+                    <form method="POST" action="{% url 'add_compost_item' %}">
+                        {% csrf_token %}
+
+                        <input type="hidden" name="waste_type" value="{{ predicted_class|lower }}">
+
+                        <button type="submit" class="compost-btn">
+                            <span>＋</span> Add to Compost Bin
+                        </button>
+                    </form>
+
+                </div>
+                {% endif %}
+
+
+                <!-- Recyclability -->
+
+                <div class="waste-info-item">
+
+                    <h3>♻ Recyclability</h3>
+
+                    <p>{{ waste_details.recyclability }}</p>
+
+                </div>
+
+
+                <!-- Disposal Instructions -->
+
+                <div class="waste-info-item">
+
+                    <h3>🗑 Disposal Recommendation</h3>
+
+                    <p>{{ waste_details.disposal }}</p>
+
+                </div>
+
+
+                <!-- Dustbin Recommendation -->
+
+                <div class="waste-info-item">
+
+                    <h3>Recommended Waste Stream</h3>
+
+                    <p>{{ waste_details.bin }}</p>
+
+                </div>
+
+
+                <!-- Management Tips -->
+
+                <div class="waste-tips">
+
+                    <h3>How to Manage This Waste</h3>
+
+                    <ul>
+
+                        {% for tip in waste_details.tips %}
+
+                        <li>{{ tip }}</li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                </div>
+
+
+                <!-- YouTube Tutorial -->
+
+                <div class="youtube-guide">
+
+                    <h3>Learn More</h3>
+
+                    <p>
+                        Watch tutorials to learn how to manage and dispose
+                        of this type of waste responsibly.
+                    </p>
+
+                    <a href="{{ youtube_url }}" target="_blank" rel="noopener noreferrer" class="youtube-btn">
+
+                        ▶ Watch YouTube Tutorials
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- Error Message -->
+
+    {% if error %}
+
+    <div class="error-message">
+        {{ error }}
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

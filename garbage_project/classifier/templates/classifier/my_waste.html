@@ -1,0 +1,332 @@
+{% extends "classifier/base.html" %}
+
+{% block content %}
+
+<div class="my-waste-container">
+
+    <!-- PAGE HEADER -->
+    <div class="my-waste-header">
+        <div>
+            <span class="my-waste-eyebrow">YOUR ACTIVITY</span>
+            <h1>My Waste</h1>
+            <p>Track your waste scans and monitor classification performance.</p>
+        </div>
+
+        <div class="waste-header-icon">♻️</div>
+    </div>
+
+
+    <!-- OVERALL STATISTICS -->
+    <section class="waste-summary">
+
+        <div class="waste-stat-card">
+            <div class="stat-icon total-icon">📷</div>
+            <div>
+                <p>Total Images Scanned</p>
+                <h2>{{ total_scans }}</h2>
+            </div>
+        </div>
+
+        <div class="waste-stat-card">
+            <div class="stat-icon correct-icon">✓</div>
+            <div>
+                <p>Correct Predictions</p>
+                <h2>{{ correct_count }}</h2>
+            </div>
+        </div>
+
+        <div class="waste-stat-card">
+            <div class="stat-icon incorrect-icon">✕</div>
+            <div>
+                <p>Incorrect Predictions</p>
+                <h2>{{ incorrect_count }}</h2>
+            </div>
+        </div>
+
+        <div class="waste-stat-card">
+            <div class="stat-icon accuracy-icon">%</div>
+            <div>
+                <p>User-Reported Accuracy</p>
+                <h2>{{ accuracy }}%</h2>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ACCURACY SECTION -->
+    <section class="waste-section accuracy-section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Classification Performance</h2>
+                <p>Based on your submitted feedback.</p>
+            </div>
+        </div>
+
+        <div class="accuracy-details">
+
+            <div class="accuracy-progress-container">
+                <div class="accuracy-progress-info">
+                    <span>Feedback accuracy</span>
+                    <strong>{{ accuracy }}%</strong>
+                </div>
+
+                <div class="accuracy-progress-bar">
+                    <div class="accuracy-progress-fill" style="width: {{ accuracy }}%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="coverage-info">
+                <span>Feedback coverage</span>
+                <strong>{{ feedback_coverage }}%</strong>
+                <p>
+                    Percentage of your scans for which you submitted
+                    feedback.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY STATISTICS -->
+    <section class="waste-section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Waste Category Statistics</h2>
+                <p>Explore how frequently each category has been predicted.</p>
+            </div>
+        </div>
+
+        {% if category_stats %}
+
+        <div class="category-table-wrapper">
+
+            <table class="category-table">
+
+                <thead>
+                    <tr>
+                        <th>Waste Category</th>
+                        <th>Total Scanned</th>
+                        <th>Correct</th>
+                        <th>Incorrect</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for stat in category_stats %}
+
+                    <tr>
+                        <td class="category-name">
+                            {{ stat.predicted_class|title }}
+                        </td>
+
+                        <td>{{ stat.total }}</td>
+
+                        <td>
+                            <span class="table-correct">
+                                {{ stat.correct }}
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="table-incorrect">
+                                {{ stat.incorrect }}
+                            </span>
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="waste-empty-state">
+            <span>📊</span>
+            <h3>No statistics available</h3>
+            <p>Start scanning waste images to build your statistics.</p>
+        </div>
+
+        {% endif %}
+
+    </section>
+
+
+    <!-- SCAN HISTORY -->
+    <section class="waste-section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Scan History</h2>
+                <p>Your previously classified waste images.</p>
+            </div>
+
+            <span class="history-count">
+                {{ total_scans }} scans
+            </span>
+        </div>
+
+
+        {% if scans %}
+
+        <div class="scan-history-wrapper">
+
+            <table class="scan-history-table">
+
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Predicted Category</th>
+                        <th>Confidence</th>
+                        <th>Feedback</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for scan in scans %}
+
+                    <tr>
+
+                        <td>
+                            {% if scan.image %}
+                            <img src="{{ scan.image.url }}" alt="Scanned waste" class="scan-thumbnail">
+                            {% else %}
+                            <span class="no-image">No image</span>
+                            {% endif %}
+                        </td>
+
+                        <td class="category-name">
+                            {{ scan.get_predicted_class_display }}
+                        </td>
+
+                        <td>
+                            {{ scan.confidence|floatformat:2 }}%
+                        </td>
+
+                        <td>
+    {% if scan.feedback == "correct" %}
+
+        <span class="feedback-badge feedback-correct">
+            ✓ Correct
+        </span>
+
+    {% elif scan.feedback == "incorrect" %}
+
+        <span class="feedback-badge feedback-incorrect">
+            ✕ Incorrect — {{ scan.get_actual_class_display }}
+        </span>
+
+    {% else %}
+
+        <div class="history-feedback-actions">
+
+            <!-- Correct button -->
+            <form method="POST" action="{% url 'submit_feedback' %}">
+                {% csrf_token %}
+                <input type="hidden" name="scan_id" value="{{ scan.id }}">
+                <input type="hidden" name="feedback" value="correct">
+
+                <button type="submit" class="history-correct-btn">
+                    ✓
+                </button>
+            </form>
+
+            <!-- Incorrect button -->
+            <button type="button"
+                    class="history-incorrect-btn"
+                    onclick="showCorrectionForm('{{ scan.id }}')">
+                ✕
+            </button>
+
+        </div>
+
+        <!-- Category selection, initially hidden -->
+        <div id="correction-form-{{ scan.id }}" class="correction-form" hidden>
+
+            <form method="POST" action="{% url 'submit_feedback' %}">
+                {% csrf_token %}
+
+                <input type="hidden" name="scan_id" value="{{ scan.id }}">
+                <input type="hidden" name="feedback" value="incorrect">
+
+                <label for="actual-class-{{ scan.id }}">
+                    What is the correct category?
+                </label>
+
+                <select name="actual_class"
+                        id="actual-class-{{ scan.id }}"
+                        required>
+                    <option value="">Select category</option>
+
+                    {% for value, label in waste_choices %}
+                        <option value="{{ value }}">{{ label }}</option>
+                    {% endfor %}
+                </select>
+
+                <button type="submit" class="submit-correction-btn">
+                    Submit correction
+                </button>
+            </form>
+
+        </div>
+
+    {% endif %}
+</td>
+
+                        <td>
+                            {{ scan.scanned_at|date:"d M Y, H:i" }}
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="waste-empty-state">
+            <span>📷</span>
+            <h3>No scans yet</h3>
+            <p>Your waste classification history will appear here.</p>
+
+            <a href="{% url 'predict_waste' %}" class="start-scanning-btn">
+                Start Scanning
+            </a>
+        </div>
+
+        {% endif %}
+
+    </section>
+
+</div>
+
+
+<script>
+    function showCorrectionForm(scanId) {
+        const form = document.getElementById(
+            "correction-form-" + scanId
+        );
+
+        form.hidden = !form.hidden;
+    }
+</script>
+
+
+{% endblock %}

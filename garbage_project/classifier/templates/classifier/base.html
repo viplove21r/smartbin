@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Waste Classifier{% endblock %}</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="{% static 'classifier/css/style.css' %}">
+
+    <!-- Additional CSS for individual pages -->
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="{% url 'predict_waste' %}" class="logo">
+                ♻ Waste Classifier
+            </a>
+
+            <div class="nav-links">
+
+                <a href="{% url 'predict_waste' %}"
+                   class="{% if request.resolver_match.url_name == 'predict_waste' %}active{% endif %}">
+                    Home
+                </a>
+
+                <a href="{% url 'dataset_view' %}"
+                   class="{% if request.resolver_match.url_name == 'dataset_view' %}active{% endif %}">
+                    Dataset
+                </a>
+
+                <a href="{% url 'compost_bin' %}">Compost Pit</a>
+                
+                <a href="{% url 'my_waste' %}">My Waste</a>
+
+                <a href="{% url 'model_info' %}"
+                   class="{% if request.resolver_match.url_name == 'model_info' %}active{% endif %}">
+                     Model Info
+    </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>Waste Classifier | AI-powered Waste Classification</p>
+
+    </footer>
+
+
+    <!-- Additional JavaScript for individual pages -->
+    {% block extra_js %}{% endblock %}
+
+</body>
+</html>

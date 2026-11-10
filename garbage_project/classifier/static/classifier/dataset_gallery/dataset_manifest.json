@@ -1,0 +1,3646 @@
+{
+    "train": [
+        {
+            "image": "train/train_0.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_1.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_2.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_3.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_4.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_5.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_6.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_7.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_8.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_9.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_10.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_11.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_12.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_13.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_14.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_15.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_16.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_17.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_18.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_19.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_20.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_21.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_22.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_23.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_24.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_25.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_26.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_27.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_28.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_29.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_30.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_31.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_32.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_33.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_34.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_35.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_36.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_37.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_38.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_39.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_40.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_41.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_42.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_43.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_44.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_45.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_46.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_47.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_48.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_49.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_50.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_51.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_52.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_53.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_54.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_55.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_56.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_57.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_58.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_59.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_60.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_61.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_62.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_63.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_64.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_65.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_66.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_67.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_68.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_69.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_70.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_71.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_72.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_73.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_74.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_75.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_76.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_77.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_78.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_79.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_80.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_81.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_82.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_83.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_84.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_85.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_86.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_87.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_88.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_89.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_90.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_91.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_92.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_93.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_94.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_95.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_96.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_97.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_98.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_99.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_100.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_101.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_102.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_103.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_104.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_105.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_106.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_107.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_108.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_109.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_110.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_111.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_112.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_113.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_114.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_115.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_116.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_117.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_118.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_119.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_120.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_121.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_122.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_123.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_124.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_125.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_126.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_127.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_128.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_129.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_130.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_131.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_132.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_133.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_134.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_135.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_136.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_137.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_138.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_139.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_140.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_141.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_142.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_143.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_144.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_145.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_146.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_147.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_148.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_149.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_150.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_151.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_152.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_153.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_154.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_155.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_156.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_157.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_158.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_159.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_160.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_161.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_162.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_163.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_164.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_165.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_166.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_167.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_168.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_169.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_170.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_171.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_172.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_173.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_174.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_175.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_176.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_177.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_178.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_179.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_180.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_181.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_182.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_183.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_184.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_185.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_186.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_187.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_188.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_189.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_190.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_191.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_192.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_193.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_194.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_195.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_196.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_197.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_198.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_199.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_200.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_201.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_202.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_203.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_204.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_205.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_206.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_207.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_208.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_209.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_210.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_211.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_212.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_213.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_214.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_215.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_216.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_217.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_218.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_219.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_220.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_221.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_222.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_223.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_224.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_225.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_226.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_227.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_228.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_229.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_230.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_231.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_232.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_233.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_234.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_235.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_236.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_237.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_238.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_239.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_240.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_241.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_242.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_243.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_244.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_245.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_246.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_247.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_248.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_249.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_250.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_251.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_252.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_253.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_254.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_255.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_256.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_257.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_258.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_259.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_260.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_261.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_262.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_263.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_264.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_265.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_266.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_267.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_268.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_269.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_270.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_271.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_272.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_273.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_274.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_275.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_276.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_277.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_278.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_279.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_280.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_281.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_282.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_283.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_284.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_285.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_286.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_287.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_288.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "train/train_289.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_290.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_291.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "train/train_292.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_293.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "train/train_294.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_295.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_296.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "train/train_297.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "train/train_298.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "train/train_299.jpg",
+            "label": "metal"
+        }
+    ],
+    "validation": [
+        {
+            "image": "validation/validation_0.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_1.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_2.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_3.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_4.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_5.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_6.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_7.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_8.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_9.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_10.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_11.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_12.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_13.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_14.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_15.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_16.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_17.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_18.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_19.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_20.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_21.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_22.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_23.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_24.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_25.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_26.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_27.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_28.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_29.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_30.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_31.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_32.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_33.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_34.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_35.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_36.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_37.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_38.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_39.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_40.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_41.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_42.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_43.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_44.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_45.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_46.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_47.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_48.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_49.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_50.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_51.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_52.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_53.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_54.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_55.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_56.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_57.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_58.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_59.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_60.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_61.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_62.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_63.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_64.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_65.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_66.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_67.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_68.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_69.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_70.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_71.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_72.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_73.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_74.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_75.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_76.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_77.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_78.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_79.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_80.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_81.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_82.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_83.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_84.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_85.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_86.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_87.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_88.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_89.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_90.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_91.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_92.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_93.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_94.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_95.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_96.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_97.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_98.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_99.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_100.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_101.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_102.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_103.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_104.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_105.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_106.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_107.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_108.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_109.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_110.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_111.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_112.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_113.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_114.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_115.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_116.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_117.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_118.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_119.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_120.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_121.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_122.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_123.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_124.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_125.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_126.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_127.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_128.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_129.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_130.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_131.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_132.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_133.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_134.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_135.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_136.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_137.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_138.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_139.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_140.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_141.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_142.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_143.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_144.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_145.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_146.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_147.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_148.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_149.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_150.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_151.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_152.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_153.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_154.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_155.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_156.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_157.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_158.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_159.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_160.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_161.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_162.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_163.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_164.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_165.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_166.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_167.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_168.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_169.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_170.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_171.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_172.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_173.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_174.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_175.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_176.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_177.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_178.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_179.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_180.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_181.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_182.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_183.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_184.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_185.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_186.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_187.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_188.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_189.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_190.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_191.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_192.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_193.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_194.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_195.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_196.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_197.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_198.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_199.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_200.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_201.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_202.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_203.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_204.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_205.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_206.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_207.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_208.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_209.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_210.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_211.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_212.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_213.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_214.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_215.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_216.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_217.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_218.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_219.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_220.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_221.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_222.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_223.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_224.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_225.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_226.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_227.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_228.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_229.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_230.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_231.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_232.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_233.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_234.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_235.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_236.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_237.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_238.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_239.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_240.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_241.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_242.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_243.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_244.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_245.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_246.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_247.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_248.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_249.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_250.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_251.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_252.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_253.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_254.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_255.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_256.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_257.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_258.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_259.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_260.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_261.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_262.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_263.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_264.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_265.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_266.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_267.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_268.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_269.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_270.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "validation/validation_271.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_272.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_273.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_274.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_275.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_276.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_277.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_278.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_279.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_280.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_281.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_282.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_283.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_284.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_285.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_286.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_287.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_288.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_289.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "validation/validation_290.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_291.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_292.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_293.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "validation/validation_294.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_295.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_296.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "validation/validation_297.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "validation/validation_298.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "validation/validation_299.jpg",
+            "label": "plastic"
+        }
+    ],
+    "test": [
+        {
+            "image": "test/test_0.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_1.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_2.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_3.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_4.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_5.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_6.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_7.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_8.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_9.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_10.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_11.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_12.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_13.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_14.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_15.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_16.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_17.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_18.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_19.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_20.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_21.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_22.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_23.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_24.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_25.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_26.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_27.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_28.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_29.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_30.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_31.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_32.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_33.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_34.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_35.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_36.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_37.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_38.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_39.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_40.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_41.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_42.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_43.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_44.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_45.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_46.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_47.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_48.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_49.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_50.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_51.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_52.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_53.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_54.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_55.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_56.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_57.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_58.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_59.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_60.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_61.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_62.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_63.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_64.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_65.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_66.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_67.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_68.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_69.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_70.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_71.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_72.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_73.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_74.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_75.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_76.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_77.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_78.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_79.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_80.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_81.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_82.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_83.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_84.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_85.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_86.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_87.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_88.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_89.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_90.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_91.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_92.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_93.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_94.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_95.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_96.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_97.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_98.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_99.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_100.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_101.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_102.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_103.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_104.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_105.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_106.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_107.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_108.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_109.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_110.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_111.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_112.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_113.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_114.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_115.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_116.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_117.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_118.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_119.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_120.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_121.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_122.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_123.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_124.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_125.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_126.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_127.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_128.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_129.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_130.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_131.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_132.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_133.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_134.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_135.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_136.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_137.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_138.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_139.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_140.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_141.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_142.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_143.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_144.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_145.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_146.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_147.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_148.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_149.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_150.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_151.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_152.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_153.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_154.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_155.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_156.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_157.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_158.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_159.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_160.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_161.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_162.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_163.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_164.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_165.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_166.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_167.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_168.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_169.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_170.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_171.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_172.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_173.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_174.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_175.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_176.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_177.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_178.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_179.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_180.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_181.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_182.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_183.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_184.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_185.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_186.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_187.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_188.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_189.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_190.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_191.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_192.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_193.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_194.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_195.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_196.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_197.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_198.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_199.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_200.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_201.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_202.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_203.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_204.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_205.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_206.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_207.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_208.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_209.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_210.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_211.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_212.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_213.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_214.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_215.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_216.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_217.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_218.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_219.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_220.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_221.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_222.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_223.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_224.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_225.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_226.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_227.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_228.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_229.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_230.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_231.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_232.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_233.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_234.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_235.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_236.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_237.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_238.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_239.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_240.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_241.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_242.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_243.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_244.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_245.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_246.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_247.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_248.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_249.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_250.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_251.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_252.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_253.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_254.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_255.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_256.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_257.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_258.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_259.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_260.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_261.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_262.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_263.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_264.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_265.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_266.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_267.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_268.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_269.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_270.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_271.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_272.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_273.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_274.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_275.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_276.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_277.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_278.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_279.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_280.jpg",
+            "label": "glass"
+        },
+        {
+            "image": "test/test_281.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_282.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_283.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_284.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_285.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_286.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_287.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_288.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_289.jpg",
+            "label": "cardboard"
+        },
+        {
+            "image": "test/test_290.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_291.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_292.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_293.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_294.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_295.jpg",
+            "label": "plastic"
+        },
+        {
+            "image": "test/test_296.jpg",
+            "label": "trash"
+        },
+        {
+            "image": "test/test_297.jpg",
+            "label": "paper"
+        },
+        {
+            "image": "test/test_298.jpg",
+            "label": "metal"
+        },
+        {
+            "image": "test/test_299.jpg",
+            "label": "glass"
+        }
+    ],
+    "statistics": {
+        "train": {
+            "total": 300,
+            "original_total": 20894,
+            "classes": {
+                "cardboard": 50,
+                "glass": 50,
+                "metal": 50,
+                "paper": 50,
+                "plastic": 50,
+                "trash": 50
+            }
+        },
+        "validation": {
+            "total": 300,
+            "original_total": 4477,
+            "classes": {
+                "cardboard": 50,
+                "glass": 50,
+                "metal": 50,
+                "paper": 50,
+                "plastic": 50,
+                "trash": 50
+            }
+        },
+        "test": {
+            "total": 300,
+            "original_total": 4478,
+            "classes": {
+                "cardboard": 50,
+                "glass": 50,
+                "metal": 50,
+                "paper": 50,
+                "plastic": 50,
+                "trash": 50
+            }
+        }
+    }
+}

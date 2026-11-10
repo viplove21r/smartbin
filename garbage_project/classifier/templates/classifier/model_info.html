@@ -1,0 +1,497 @@
+{% extends "classifier/base.html" %}
+
+{% block title %}
+Waste Classifier | Model Information
+{% endblock %}
+
+{% block content %}
+
+<div class="model-page">
+
+    <!-- HERO SECTION -->
+    <section class="model-hero">
+
+        <span class="section-tag">ABOUT THE MODEL</span>
+
+        <h1>How Does Our Waste Classifier Work?</h1>
+
+        <p>
+            Our waste classification system uses deep learning
+            and computer vision to identify different categories
+            of waste from an uploaded image.
+        </p>
+
+        <div class="model-highlight">
+            <h2>EfficientNetB0</h2>
+            <p>Transfer Learning Based Image Classification</p>
+        </div>
+
+    </section>
+
+
+    <!-- MODEL OVERVIEW -->
+    <section class="model-section">
+
+        <h2>01. Model Overview</h2>
+
+        <p>
+            The classification system is built using
+            <strong>EfficientNetB0</strong>, a convolutional neural
+            network (CNN) architecture originally trained on
+            ImageNet.
+        </p>
+
+        <p>
+            Instead of training an entire neural network from
+            scratch, we use transfer learning. The pretrained
+            EfficientNetB0 network acts as a feature extractor,
+            while additional dense layers are trained to classify
+            waste images into our required categories.
+        </p>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <span>Architecture</span>
+                <h3>EfficientNetB0</h3>
+            </div>
+
+            <div class="info-card">
+                <span>Input Image</span>
+                <h3>224 × 224 × 3</h3>
+            </div>
+
+            <div class="info-card">
+                <span>Output Classes</span>
+                <h3>6 Categories</h3>
+            </div>
+
+            <div class="info-card">
+                <span>Learning Approach</span>
+                <h3>Transfer Learning</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ARCHITECTURE -->
+    <section class="model-section">
+
+        <h2>02. Model Architecture</h2>
+
+        <p>
+            The model consists of a pretrained EfficientNetB0
+            backbone followed by a custom classification head.
+        </p>
+
+        <div class="architecture-flow">
+
+            <div class="architecture-box">
+                <span>INPUT</span>
+                <h3>224 × 224 × 3</h3>
+                <p>RGB Image</p>
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <div class="architecture-box">
+                <span>FEATURE EXTRACTION</span>
+                <h3>EfficientNetB0</h3>
+                <p>Pretrained CNN Backbone</p>
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <div class="architecture-box">
+                <span>POOLING</span>
+                <h3>Global Average Pooling</h3>
+                <p>Reduces feature dimensions</p>
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <div class="architecture-box">
+                <span>NORMALIZATION</span>
+                <h3>Batch Normalization</h3>
+                <p>Normalizes activations</p>
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <div class="architecture-box">
+                <span>HIDDEN LAYERS</span>
+                <h3>Dense 256 → Dense 128</h3>
+                <p>ReLU activation with Dropout</p>
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <div class="architecture-box">
+                <span>OUTPUT LAYER</span>
+                <h3>Dense 6 + Softmax</h3>
+                <p>Class probabilities</p>
+            </div>
+
+        </div>
+
+        <div class="note-box">
+            <strong>Why EfficientNetB0?</strong>
+
+            <p>
+                EfficientNet uses a compound scaling approach
+                to balance network depth, width, and input
+                resolution. EfficientNetB0 provides a relatively
+                lightweight architecture while maintaining
+                strong image classification capabilities.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- PREPROCESSING -->
+    <section class="model-section">
+
+        <h2>03. Image Preprocessing</h2>
+
+        <p>
+            Before an image is passed to the neural network,
+            it undergoes several preprocessing operations.
+        </p>
+
+        <div class="process-grid">
+
+            <div class="process-card">
+                <div class="process-number">1</div>
+                <h3>Image Upload</h3>
+                <p>
+                    The user uploads an image through the
+                    Django web interface.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">2</div>
+                <h3>Color Conversion</h3>
+                <p>
+                    The image is converted from OpenCV's
+                    BGR representation to RGB.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">3</div>
+                <h3>Resizing</h3>
+                <p>
+                    The image is resized to 224 × 224 pixels
+                    to match the model's input dimensions.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">4</div>
+                <h3>Tensor Conversion</h3>
+                <p>
+                    The image is converted to float32 and
+                    a batch dimension is added.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">5</div>
+                <h3>Prediction</h3>
+                <p>
+                    The processed image is passed to the
+                    trained model for classification.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="note-box">
+            <strong>Important preprocessing detail:</strong>
+
+            <p>
+                The inference pipeline retains pixel values in
+                the 0–255 range. We do not divide the image
+                by 255 because the EfficientNetB0 implementation
+                includes its own input rescaling.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- DATASET -->
+    <section class="model-section">
+
+        <h2>04. Dataset</h2>
+
+        <p>
+            The model was trained using the
+            <strong>TrashBusters/combined</strong> dataset,
+            containing images belonging to six waste categories.
+        </p>
+
+        <div class="class-grid">
+
+            <div class="waste-class">
+                <span>01</span>
+                <h3>Cardboard</h3>
+            </div>
+
+            <div class="waste-class">
+                <span>02</span>
+                <h3>Glass</h3>
+            </div>
+
+            <div class="waste-class">
+                <span>03</span>
+                <h3>Metal</h3>
+            </div>
+
+            <div class="waste-class">
+                <span>04</span>
+                <h3>Paper</h3>
+            </div>
+
+            <div class="waste-class">
+                <span>05</span>
+                <h3>Plastic</h3>
+            </div>
+
+            <div class="waste-class">
+                <span>06</span>
+                <h3>Trash</h3>
+            </div>
+
+        </div>
+
+        <div class="dataset-summary">
+
+            <h3>Dataset Gallery Sample</h3>
+
+            <div class="summary-numbers">
+
+                <div>
+                    <h2>300</h2>
+                    <p>Training images</p>
+                </div>
+
+                <div>
+                    <h2>300</h2>
+                    <p>Validation images</p>
+                </div>
+
+                <div>
+                    <h2>300</h2>
+                    <p>Testing images</p>
+                </div>
+
+            </div>
+
+            <p class="small-note">
+                These numbers represent the 50 randomly exported
+                images per class in each split, not the complete
+                original training dataset.
+            </p>
+
+            <a href="{% url 'dataset_view' %}" class="text-link">
+                Explore Dataset Gallery →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRAINING -->
+    <section class="model-section">
+
+        <h2>05. Training Methodology</h2>
+
+        <p>
+            The model was trained using a two-stage transfer
+            learning approach.
+        </p>
+
+        <div class="training-stage">
+
+            <div class="stage-number">STAGE 01</div>
+
+            <h3>Feature Extraction</h3>
+
+            <p>
+                Initially, the pretrained EfficientNetB0
+                backbone is frozen. Only the custom
+                classification head is trained.
+            </p>
+
+            <ul>
+                <li>Pretrained ImageNet weights</li>
+                <li>Frozen EfficientNetB0 layers</li>
+                <li>Adam optimizer</li>
+                <li>Learning rate: 0.0003</li>
+                <li>Sparse categorical crossentropy loss</li>
+            </ul>
+
+        </div>
+
+        <div class="training-stage">
+
+            <div class="stage-number">STAGE 02</div>
+
+            <h3>Fine-Tuning</h3>
+
+            <p>
+                After training the classification head,
+                the last 40 layers of EfficientNetB0 are
+                unfrozen to allow the model to learn
+                more task-specific features.
+            </p>
+
+            <ul>
+                <li>Fine-tune last 40 backbone layers</li>
+                <li>Batch Normalization layers remain frozen</li>
+                <li>Adam optimizer</li>
+                <li>Learning rate: 0.00001</li>
+                <li>Sparse categorical crossentropy loss</li>
+            </ul>
+
+        </div>
+
+
+        <h3 class="subheading">Regularization and Augmentation</h3>
+
+        <div class="technique-grid">
+
+            <div class="technique-card">
+                <h3>Random Flip</h3>
+                <p>Introduces horizontal variations.</p>
+            </div>
+
+            <div class="technique-card">
+                <h3>Random Rotation</h3>
+                <p>Rotates images by small random angles.</p>
+            </div>
+
+            <div class="technique-card">
+                <h3>Random Zoom</h3>
+                <p>Introduces scale variations.</p>
+            </div>
+
+            <div class="technique-card">
+                <h3>Random Contrast</h3>
+                <p>Changes image contrast during training.</p>
+            </div>
+
+            <div class="technique-card">
+                <h3>Dropout</h3>
+                <p>Reduces over-reliance on individual neurons.</p>
+            </div>
+
+            <div class="technique-card">
+                <h3>Class Weights</h3>
+                <p>Helps account for differences in class frequency.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OUTPUT -->
+    <section class="model-section">
+
+        <h2>06. Classification Output</h2>
+
+        <p>
+            The final layer uses Softmax activation to produce
+            a probability distribution across the six classes.
+        </p>
+
+        <div class="note-box">
+
+            <strong>Example:</strong>
+
+            <p>
+                Suppose the model produces the following
+                probabilities for an uploaded image:
+            </p>
+
+            <div class="probability-example">
+
+                <div class="probability-row">
+                    <span>Cardboard</span>
+                    <span>5%</span>
+                </div>
+
+                <div class="probability-row">
+                    <span>Glass</span>
+                    <span>2%</span>
+                </div>
+
+                <div class="probability-row">
+                    <span>Metal</span>
+                    <span>3%</span>
+                </div>
+
+                <div class="probability-row">
+                    <span>Paper</span>
+                    <span>82%</span>
+                </div>
+
+                <div class="probability-row">
+                    <span>Plastic</span>
+                    <span>6%</span>
+                </div>
+
+                <div class="probability-row">
+                    <span>Trash</span>
+                    <span>2%</span>
+                </div>
+
+            </div>
+
+            <p>
+                In this hypothetical example, Paper has the
+                highest predicted probability, so it is
+                selected as the predicted class.
+            </p>
+
+        </div>
+
+        <div class="note-box">
+            <strong>Note:</strong>
+
+            <p>
+                The Softmax probability represents the model's
+                confidence score, not a guarantee that the
+                classification is correct.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- FINAL SECTION -->
+    <section class="model-ending">
+
+        <h2>Want to Try the Model?</h2>
+
+        <p>
+            Upload a waste image and see how the model
+            classifies it.
+        </p>
+
+        <a href="{% url 'predict_waste' %}" class="primary-btn">
+            Try Waste Classifier →
+        </a>
+
+    </section>
+
+</div>
+
+{% endblock %}

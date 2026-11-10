@@ -1,0 +1,405 @@
+{% extends "classifier/base.html" %}
+{%load tz%}
+
+{% block content %}
+
+<div class="compost-container">
+
+    <!-- PAGE HEADER -->
+    <header class="compost-header">
+        <div class="compost-header-content">
+            <span class="compost-eyebrow">SUSTAINABLE WASTE MANAGEMENT</span>
+            <h1>Compost Management</h1>
+            <p>
+                Turn your paper and cardboard waste into something useful.
+                Organise your materials and track your composting journey.
+            </p>
+        </div>
+
+        <div class="compost-header-icon">🌱</div>
+    </header>
+
+
+    <!-- SUMMARY CARDS -->
+    <section class="compost-summary">
+
+        <div class="summary-card">
+            <div class="summary-icon">📦</div>
+            <div>
+                <span class="summary-label">Waiting Items</span>
+                <h2>{{ available_items|length }}</h2>
+            </div>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-icon">🌿</div>
+            <div>
+                <span class="summary-label">Total Compost Pits</span>
+                <h2>{{ pits|length }}</h2>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SECTION 1: AVAILABLE ITEMS -->
+    <section class="compost-section available-items-section">
+
+        <div class="compost-section-heading">
+            <div>
+                <span class="section-eyebrow">YOUR COLLECTION</span>
+                <h2>Items Waiting for Composting</h2>
+                <p>Select the items you want to group into a new compost pit.</p>
+            </div>
+
+            <span class="section-count">
+                {{ available_items|length }} items
+            </span>
+        </div>
+
+
+        {% if available_items %}
+
+            <form method="POST" action="{% url 'create_compost_pit' %}">
+                {% csrf_token %}
+
+                <div class="compost-items-grid">
+
+                    {% for item in available_items %}
+
+                        <div class="compost-item-card">
+
+                            <div class="item-card-top">
+
+                                <div class="item-type-icon">
+                                    {% if item.waste_type == "paper" %}
+                                        📄
+                                    {% else %}
+                                        📦
+                                    {% endif %}
+                                </div>
+
+                                <input
+                                    type="checkbox"
+                                    name="selected_items"
+                                    value="{{ item.id }}"
+                                    id="item-{{ item.id }}"
+                                    class="compost-checkbox"
+                                >
+
+                            </div>
+
+                            <label for="item-{{ item.id }}" class="item-card-label">
+
+                                <h3>{{ item.get_waste_type_display }}</h3>
+
+                                <span class="item-id">
+                                    Item #{{ item.id }}
+                                </span>
+
+                                <span class="item-date">
+                                    Added {{ item.added_at|date:"d M Y" }}
+                                </span>
+
+                            </label>
+
+                            <button
+                                type="submit"
+                                form="remove-item-{{ item.id }}"
+                                class="remove-item-btn"
+                            >
+                                ✕ Remove
+                            </button>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+
+                <div class="create-pit-area">
+
+                    <div class="create-pit-info">
+                        <span>🌱</span>
+                        <div>
+                            <strong>Ready to start composting?</strong>
+                            <p>Select one or more items above to create a pit.</p>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="create-pit-btn">
+                        + Create Compost Pit
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- INDIVIDUAL REMOVE FORMS -->
+            {% for item in available_items %}
+
+                <form
+                    id="remove-item-{{ item.id }}"
+                    method="POST"
+                    action="{% url 'remove_compost_item' item.id %}"
+                    style="display:none;"
+                >
+                    {% csrf_token %}
+                </form>
+
+            {% endfor %}
+
+
+        {% else %}
+
+            <div class="compost-empty-state">
+                <div class="empty-state-icon">🍃</div>
+                <h3>No items waiting for composting</h3>
+                <p>
+                    When your model identifies paper or cardboard,
+                    add it to your compost bin and it will appear here.
+                </p>
+            </div>
+
+        {% endif %}
+
+    </section>
+
+
+    <!-- SECTION 2: COMPOST PITS -->
+    <section class="compost-section compost-pits-section">
+
+        <div class="compost-section-heading">
+            <div>
+                <span class="section-eyebrow">TRACK YOUR PROGRESS</span>
+                <h2>Your Compost Pits</h2>
+                <p>Monitor the progress of each composting group independently.</p>
+            </div>
+
+            <span class="section-count">
+                {{ pits|length }} pits
+            </span>
+        </div>
+
+
+        {% if pits %}
+
+            <div class="compost-pits-grid">
+
+                {% for pit in pits %}
+
+                    <div class="pit-card">
+
+                        <!-- PIT HEADER -->
+                        <div class="pit-card-header">
+
+                            <div class="pit-icon">🌱</div>
+
+                            <div class="pit-title">
+                                <h3>{{ pit.name }}</h3>
+                                <small>
+                                    Started {{ pit.start_time|date:"d M Y" }}
+                                </small>
+                            </div>
+
+                            {% if pit.is_completed %}
+                                <span class="pit-status completed">
+                                    Period Completed
+                                </span>
+                            {% else %}
+                                <span class="pit-status active">
+                                    ● Active
+                                </span>
+                            {% endif %}
+
+                        </div>
+
+
+                        <!-- PIT CONTENTS -->
+                        <div class="pit-content">
+
+                            <h4>Materials in this pit</h4>
+
+                            <div class="pit-materials">
+
+                                {% for pit_item in pit.items.all %}
+
+                                    <span class="material-tag">
+
+                                        {% if pit_item.item.waste_type == "paper" %}
+                                            📄
+                                        {% else %}
+                                            📦
+                                        {% endif %}
+
+                                        {{ pit_item.item.get_waste_type_display }}
+                                        #{{ pit_item.item.id }}
+
+                                    </span>
+
+                                {% empty %}
+
+                                    <span>No items in this pit.</span>
+
+                                {% endfor %}
+
+                            </div>
+
+
+                            <!-- COUNTDOWN -->
+                            <div class="pit-timer-box">
+
+                                <div class="timer-heading">
+                                    <span>⏳</span>
+                                    <span>Time Remaining</span>
+                                </div>
+
+                                <div
+                                    class="countdown timer-value"
+                                    data-end="{{ pit.end_time|date:'c' }}"
+                                >
+                                    Calculating...
+                                </div>
+
+                                <small>30-day composting tracking period</small>
+
+                            </div>
+
+
+                            <!-- STOPWATCH -->
+                            <div class="pit-stopwatch-box">
+
+                                <div class="timer-heading">
+                                    <span>⏱️</span>
+                                    <span>Elapsed Time</span>
+                                </div>
+
+                                <div
+                                    class="stopwatch timer-value"
+                                    data-start="{{ pit.start_time|date:'c' }}"
+                                >
+                                    Calculating...
+                                </div>
+
+                            </div>
+
+
+                            <div class="pit-start-date">
+                                <span>Started on</span>
+                                <strong>
+                                    {{ pit.start_time|date:"d M Y, H:i" }}
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <!-- DELETE PIT -->
+                        <div class="pit-card-footer">
+
+                            <form
+                                method="POST"
+                                action="{% url 'delete_compost_pit' pit.id %}"
+                                onsubmit="return confirm('Are you sure you want to delete this compost pit? Its items will return to the available compost bin.');"
+                            >
+                                {% csrf_token %}
+
+                                <button type="submit" class="delete-pit-btn">
+                                    🗑 Delete Pit
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+
+        {% else %}
+
+            <div class="compost-empty-state">
+                <div class="empty-state-icon">🪴</div>
+                <h3>No compost pits created yet</h3>
+                <p>
+                    Select items from your collection and create your
+                    first compost pit. Its timer will start automatically.
+                </p>
+            </div>
+
+        {% endif %}
+
+    </section>
+
+</div>
+
+
+<!-- COUNTDOWN AND STOPWATCH -->
+
+<script>
+
+function formatTime(totalSeconds) {
+
+    totalSeconds = Math.max(0, Math.floor(totalSeconds));
+
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+
+function updateTimers() {
+
+    const now = Date.now();
+
+    // Independent countdown for each pit
+    document.querySelectorAll(".countdown").forEach(timer => {
+
+        const endTime = new Date(timer.dataset.end).getTime();
+
+        const remainingSeconds = Math.max(
+            0,
+            Math.floor((endTime - now) / 1000)
+        );
+
+        if (remainingSeconds === 0) {
+            timer.textContent = "Period Completed";
+        } else {
+            timer.textContent = formatTime(remainingSeconds);
+        }
+
+    });
+
+
+    // Independent stopwatch for each pit
+    document.querySelectorAll(".stopwatch").forEach(timer => {
+
+        const startTime = new Date(timer.dataset.start).getTime();
+
+        const elapsedSeconds = Math.max(
+            0,
+            Math.floor((now - startTime) / 1000)
+        );
+
+        timer.textContent = formatTime(elapsedSeconds);
+
+    });
+
+}
+
+
+updateTimers();
+
+setInterval(updateTimers, 1000);
+
+</script>
+
+{% endblock %}

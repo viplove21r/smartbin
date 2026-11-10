@@ -1,0 +1,381 @@
+
+{% extends "classifier/base.html" %}
+{% load static %}
+
+{% block title %}
+Waste Classifier | Dataset Gallery
+{% endblock %}
+
+
+{% block content %}
+
+<div class="dataset-container">
+
+    <!-- ================= PAGE HEADING ================= -->
+
+    <div class="page-heading">
+
+        <h1>Dataset Gallery</h1>
+
+        <p>
+            Explore the images used to train and evaluate
+            our waste classification model.
+        </p>
+
+    </div>
+
+
+    <!-- ================= OVERALL DATASET OVERVIEW ================= -->
+
+    <div class="dataset-overview">
+
+        <div class="overview-heading">
+
+            <h2>Dataset Overview</h2>
+
+            <p>
+                A comprehensive overview of the dataset used
+                to develop and evaluate our waste classification model.
+            </p>
+
+        </div>
+
+
+        <!-- Overall Statistics -->
+
+        <div class="overview-stats">
+
+            <div class="overview-stat-card">
+
+                <span>Total Dataset Images</span>
+
+                <h2>{{ dataset_total }}</h2>
+
+            </div>
+
+
+            <div class="overview-stat-card">
+
+                <span>Waste Categories</span>
+
+                <h2>{{ category_overview|length }}</h2>
+
+            </div>
+
+
+            <div class="overview-stat-card">
+
+                <span>Training Images</span>
+
+                <h2>{{ statistics.train.original_total }}</h2>
+
+            </div>
+
+
+            <div class="overview-stat-card">
+
+                <span>Validation Images</span>
+
+                <h2>{{ statistics.validation.original_total }}</h2>
+
+            </div>
+
+
+            <div class="overview-stat-card">
+
+                <span>Testing Images</span>
+
+                <h2>{{ statistics.test.original_total }}</h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- Category Cards -->
+
+        <div class="category-overview-section">
+
+            <h2>Waste Categories</h2>
+
+            <p>
+                The dataset contains six categories of waste
+                used for training the classification model.
+                The images below are representative samples.
+            </p>
+
+
+            <div class="category-overview-grid">
+
+                {% for category in category_overview %}
+
+                <div class="category-overview-card">
+
+                    {% if category.sample_image %}
+
+                    <img
+                        src="{% static 'classifier/dataset_gallery/' %}{{ category.sample_image }}"
+                        alt="{{ category.name }}"
+                        loading="lazy"
+                    >
+
+                    {% endif %}
+
+                    <div class="category-overview-info">
+
+                        <h3>{{ category.name|title }}</h3>
+
+                        <h4>{{ category.gallery_count }} Gallery Images</h4>
+
+                        <span>
+                            50 representative images per split
+                        </span>
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+
+            <p class="gallery-note">
+
+                Note: The gallery contains {{ gallery_total }} representative
+                images ({{ statistics.train.total }} training,
+                {{ statistics.validation.total }} validation, and
+                {{ statistics.test.total }} testing samples).
+                These are samples from the complete dataset of
+                {{ dataset_total }} images.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= DATASET TABS ================= -->
+
+    <div class="dataset-tabs">
+
+        <a href="?split=train"
+           class="{% if split == 'train' %}selected-tab{% endif %}">
+            Training
+        </a>
+
+        <a href="?split=validation"
+           class="{% if split == 'validation' %}selected-tab{% endif %}">
+            Validation
+        </a>
+
+        <a href="?split=test"
+           class="{% if split == 'test' %}selected-tab{% endif %}">
+            Testing
+        </a>
+
+    </div>
+
+
+    <!-- ================= STATISTICS ================= -->
+
+    <div class="statistics-container">
+
+        <div class="stat-card">
+
+            <h3>Training Images</h3>
+
+            <p>{{ statistics.train.original_total }}</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Validation Images</h3>
+
+            <p>{{ statistics.validation.original_total }}</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Testing Images</h3>
+
+            <p>{{ statistics.test.original_total }}</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Gallery Images Displayed</h3>
+
+            <p>{{ page_obj.paginator.count }}</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CLASS DISTRIBUTION ================= -->
+
+    <div class="distribution-section">
+
+        <h2>Class Distribution</h2>
+
+        <div class="distribution-container">
+
+            {% for class_name, count in class_distribution.items %}
+
+            <div class="distribution-card">
+
+                <span class="class-name">
+                    {{ class_name|title }}
+                </span>
+
+                <span class="class-count">
+                    {{ count }} gallery images
+                </span>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FILTER ================= -->
+
+    <div class="filter-section">
+
+        <h2>Filter Images</h2>
+
+        <form method="GET" class="filter-form">
+
+            <input type="hidden" name="split" value="{{ split }}">
+
+            <select name="class">
+
+                <option value="">All Classes</option>
+
+                {% for class_name, count in class_distribution.items %}
+
+                <option value="{{ class_name }}"
+                    {% if selected_class == class_name %}selected{% endif %}>
+
+                    {{ class_name|title }}
+
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+            <button type="submit" class="primary-btn">
+                Apply Filter
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- ================= IMAGE GALLERY ================= -->
+
+    <div class="gallery-section">
+
+        <div class="gallery-heading">
+
+            <h2>
+                {{ split|title }} Dataset
+            </h2>
+
+            <p>
+                Showing {{ page_obj.start_index }} -
+                {{ page_obj.end_index }}
+                of {{ page_obj.paginator.count }} gallery images
+            </p>
+
+        </div>
+
+
+        <div class="image-grid">
+
+            {% for item in page_obj %}
+
+            <div class="image-card">
+
+                <img
+                    src="{% static 'classifier/dataset_gallery/' %}{{ item.image }}"
+                    alt="{{ item.label }}"
+                    loading="lazy"
+                >
+
+                <div class="image-card-info">
+
+                    <h3>{{ item.label|title }}</h3>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="empty-message">
+
+                <h3>No Images Found</h3>
+
+                <p>Try selecting another class.</p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PAGINATION ================= -->
+
+    {% if page_obj.paginator.num_pages > 1 %}
+
+    <div class="pagination">
+
+        {% if page_obj.has_previous %}
+
+            <a href="?split={{ split }}&class={{ selected_class|urlencode }}&page={{ page_obj.previous_page_number }}">
+                Previous
+            </a>
+
+        {% endif %}
+
+
+        <span class="current-page">
+
+            Page {{ page_obj.number }}
+            of {{ page_obj.paginator.num_pages }}
+
+        </span>
+
+
+        {% if page_obj.has_next %}
+
+            <a href="?split={{ split }}&class={{ selected_class|urlencode }}&page={{ page_obj.next_page_number }}">
+                Next
+            </a>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}
